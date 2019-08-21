@@ -8,3 +8,4 @@ included Bundled file in index.html file.
 
 Created Global function startApp, which will be used to pass data from console.Ex.. startApp([{}]).
 
+
