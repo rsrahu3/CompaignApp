@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
- function SearchComponent (props) {
+ const SearchComponent = (props)=> {
       return (<div>
                   <div className="input-group add-on">
                   <input className="form-control" placeholder="Search by name" name="srch-term" id="srch-term" type="text" 
@@ -15,7 +15,6 @@ import {connect} from 'react-redux';
                   </div>
               </div>)
 }
-
 
 const mapDispatchToProps = dispatch =>{
   return {

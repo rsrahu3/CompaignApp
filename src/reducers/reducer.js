@@ -1,26 +1,27 @@
 import utils from './../utils.js'
+
 let reducer = (state={},action)=>{
     let stateObj = Object.assign({},state);
     let filteredData;
-switch(action.type){
-    case 'Initialize_Store':
-    stateObj.data = action.payload.data;
-    stateObj.tableData = action.payload.data;
-    return stateObj;
-    case 'Filter_Data_By_Name':
-      stateObj.SerachTerm = action.payload.filterText;
-      break;
-    case 'Filter_Data_By_Start_Date':
-      stateObj.startDate = action.payload.startDate;
-      break;
-    case 'Filter_Data_By_End_Date':
-      stateObj.endDate = action.payload.endDate;
-      break;
-    case 'Show_Hide_Loader':
-        stateObj.showLoader = action.payload.show;
-        break;
-    default:
-        break;
+    switch(action.type){
+        case 'Initialize_Store':
+            stateObj.data = action.payload.data;
+            stateObj.tableData = action.payload.data;
+            return stateObj;
+        case 'Filter_Data_By_Name':
+            stateObj.SerachTerm = action.payload.filterText;
+            break;
+        case 'Filter_Data_By_Start_Date':
+            stateObj.startDate = action.payload.startDate;
+            break;
+        case 'Filter_Data_By_End_Date':
+            stateObj.endDate = action.payload.endDate;
+            break;
+        case 'Show_Hide_Loader':
+            stateObj.showLoader = action.payload.show;
+            break;
+        default:
+            break;
     }
     // maintaing filter chaining 
     if(stateObj.startDate){

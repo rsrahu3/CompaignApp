@@ -1,8 +1,8 @@
 import React from 'react';
 import utils from '../utils';
 import {connect} from 'react-redux';
-function TableComponent(props){
-  
+
+let TableComponent = (props)=>{
   let CurrentDate = new Date().toISOString().split('T')[0];
   return (<div>
             <table className="table">
@@ -29,10 +29,9 @@ function TableComponent(props){
                   <td>${item.Budget}</td>
                   </tr>)
                   })}
-    </tbody>
-  </table>
-        </div>);
-    
+              </tbody>
+            </table>
+          </div>);
 }
 
 const mapStateToProps = state =>{
@@ -40,7 +39,5 @@ const mapStateToProps = state =>{
     data:state.tableData
   };
 }
-
-
 
 export default connect(mapStateToProps)(TableComponent);

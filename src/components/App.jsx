@@ -3,20 +3,15 @@ import ReactDOM  from 'react-dom';
 import TableComponent from './TableComponent.jsx';
 import DateComponent from './DateComponent.jsx';
 import SearchComponent from './SearchComponent.jsx';
-
-import {createStore,applyMiddleware} from 'redux';
-import {Provider,connect} from 'react-redux';
-
-import reducer from './../reducers/reducer.js';
 import {itemsFetchData} from './../middleware.js';
-
+import {connect} from 'react-redux';
 
 class App extends React.Component{
     constructor(props){
         super(props);
         this.state={data:this.props.data}
     }
- componentDidMount() {
+    componentDidMount() {
      if(!this.props.isStatic){
         this.props.fetchData('https://my-json-server.typicode.com/rsrahu3/Compaign5/data');
      }

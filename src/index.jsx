@@ -3,6 +3,7 @@ import ReactDOM  from 'react-dom';
 import App from './components/App.jsx'
 import {Provider,connect} from 'react-redux';
 import initializeStore from './configureStore.js'
+
 let obj = window;
 window.startApp = (data)=>{
     if(data){
@@ -16,5 +17,5 @@ window.startApp = (data)=>{
     }
     let initialData = data?{"data":data,"tableData":data,"staticData":true}:null;
     let store = initializeStore(initialData);
-ReactDOM.render(<Provider store={store}><App data={data}/></Provider>, document.getElementById('root'));
+    ReactDOM.render(<Provider store={store}><App data={data}/></Provider>, document.getElementById('root'));
 }
