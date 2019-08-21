@@ -18,7 +18,7 @@ class App extends React.Component{
     }
  componentDidMount() {
      if(!this.props.isStatic){
-        this.props.fetchData('https://my-json-server.typicode.com/rsrahu3/Compaign4/data');
+        this.props.fetchData('https://my-json-server.typicode.com/rsrahu3/Compaign5/data');
      }
     }
     render(){

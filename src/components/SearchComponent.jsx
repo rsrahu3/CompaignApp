@@ -1,26 +1,19 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
- class SearchComponent extends React.Component {
-    constructor(props){
-        super(props);
-        console.log(props)
-    }
-    render(){
- 
-        return (<div>
-                    <div className="input-group add-on">
-                    <input className="form-control" placeholder="Search by name" name="srch-term" id="srch-term" type="text" 
-                    onChange={(e)=>{
-                       this.props.filterByName(e.target.value);
+ function SearchComponent (props) {
+      return (<div>
+                  <div className="input-group add-on">
+                  <input className="form-control" placeholder="Search by name" name="srch-term" id="srch-term" type="text" 
+                  onChange={(e)=>{
+                      props.filterByName(e.target.value);
 
-                    }}/>
-                    <div className="input-group-btn">
-                    <button id="searchButton" className="btn btn-default" type="submit"><i className="glyphicon glyphicon-search"></i></button>
-                    </div>
-                    </div>
-                </div>
-)}
+                  }}/>
+                  <div className="input-group-btn">
+                  <button id="searchButton" className="btn btn-default" type="submit"><i className="glyphicon glyphicon-search"></i></button>
+                  </div>
+                  </div>
+              </div>)
 }
 
 
