@@ -8,6 +8,4 @@ describe('Table component', () => {
   it('should render Table Component', () => {
     const component = shallow(<TableComponent/>);
   });
-
-  
 });
