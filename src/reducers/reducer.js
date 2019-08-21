@@ -16,6 +16,9 @@ switch(action.type){
     case 'Filter_Data_By_End_Date':
       stateObj.endDate = action.payload.endDate;
       break;
+    case 'Show_Hide_Loader':
+        stateObj.showLoader = action.payload.show;
+        break;
     default:
         break;
     }

@@ -22,6 +22,9 @@ class App extends React.Component{
      }
     }
     render(){
+        if (this.props.isLoading) {
+            return <h2><p>Loading…</p></h2>;
+        }
         let DateObj = {
             startDate:{
                 name:"Start-Date",
@@ -45,7 +48,8 @@ class App extends React.Component{
 const mapStateToProps = (state) => {
     return {
         data: state.data,
-        isStatic:state.staticData
+        isStatic:state.staticData,
+        isLoading: state.showLoader
     };
 };
 
