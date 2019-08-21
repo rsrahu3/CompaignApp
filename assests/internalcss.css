@@ -1,0 +1,20 @@
+.circle_green
+    {
+       
+        padding: 8px 7px;
+        background: green;
+        width: 2px;
+        border-radius: 100%;
+    }
+    .circle_red
+    {
+        padding: 8px 7px;
+        background: red;
+        width: 2px;
+        border-radius: 100%;  
+    }
+
+    #root
+    {
+        padding:20px;
+    }
