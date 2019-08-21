@@ -1,4 +1,4 @@
-To Setup the code , run below command over node..
+To Setup the code , run below command over node...
   Step 1:npm install
   Step 2:npm run dev
   Step 3:Double click on index.html and open in browser
